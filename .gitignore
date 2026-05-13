@@ -6,8 +6,10 @@ build/
 dist/
 **/dist/
 
-# cache
-*__pycache__
+venv/
+__pycache__/
+*.pyc
+.env
 
 # IDE
 .idea/
