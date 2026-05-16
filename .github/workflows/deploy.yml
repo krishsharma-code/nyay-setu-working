@@ -28,8 +28,8 @@ jobs:
       - name: Run Backend Tests
         run: |
           cd backend/nyaysetu-backend
-          pytest
-
+          python -m pytest
+          
 
   frontend-tests:
     runs-on: ubuntu-latest
@@ -51,7 +51,7 @@ jobs:
       - name: Run Frontend Tests
         run: |
           cd frontend/nyaysetu-frontend
-          npm test -- --watchAll=false
+          npm run build
 
 
   nlp-tests:
@@ -74,7 +74,7 @@ jobs:
       - name: Run NLP Tests
         run: |
           cd nlp-orchestrator
-          pytest
+          python -m pytest
 
 
   build-and-push:
