@@ -267,6 +267,7 @@ public class SecurityConfig {
 
                         // ── Admin/oversight-only endpoints ────────────────────────────────
                         .requestMatchers(
+                                "/api/admin/**",
                                 "/api/v1/cases/pending-assignment",
                                 "/api/v1/cases/judge-workload",
                                 "/verify/admin/**",
